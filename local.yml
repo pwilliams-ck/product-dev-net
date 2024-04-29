@@ -9,7 +9,7 @@
       - whois
       - iperf
       - nmap
-      - nvim
+      - neovim
       - fzf
       - tmux
       - ripgrep
