@@ -5,7 +5,6 @@
   vars:
     packages:
       - traceroute
-      - net-tools
       - whois
       - iperf
       - nmap
@@ -38,6 +37,12 @@
         state: present
       when: ansible_facts['os_family'] == 'RedHat'
 
+    - name: Install specified packages (macOS)
+      homebrew:
+        name: "{{ packages }}"
+        state: present
+      when: ansible_facts['os_family'] == 'Darwin'
+
     - name: Install bat (Debian)
       apt:
         deb: https://github.com/sharkdp/bat/releases/download/v0.22.1/bat_0.22.1_amd64.deb
@@ -49,6 +54,12 @@
         state: present
       when: ansible_facts['os_family'] == 'RedHat'
 
+    - name: Install bat (macOS)
+      homebrew:
+        name: bat
+        state: present
+      when: ansible_facts['os_family'] == 'Darwin'
+
     - name: Install dust (Debian)
       apt:
         deb: https://github.com/bootandy/dust/releases/download/v1.0.0/du-dust_1.0.0-1_amd64.deb
@@ -59,3 +70,9 @@
         name: https://github.com/bootandy/dust/releases/download/v1.0.0/du-dust-1.0.0-1.x86_64.rpm
         state: present
       when: ansible_facts['os_family'] == 'RedHat'
+
+    - name: Install dust (macOS)
+      homebrew:
+        name: dust
+        state: present
+      when: ansible_facts['os_family'] == 'Darwin'
