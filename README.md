@@ -25,14 +25,15 @@ sudo yum install ansible
 ```bash
 brew install ansible
 ```
+---
 
-Now run the follwing command.
+Now that Ansible is installed, run the follwing command.
 
 ```bash
 sudo ansible-pull -U https://github.com/pwilliams-ck/product-dev-net
 ```
 
-That's it, very noteworthy mentions are:
+That's it, very noteworthy mentions to try out are:
 
 - `fzf` - Fuzzy file finding
 - `rg` - Ripgrep, faster `grep`, repects hidden files
