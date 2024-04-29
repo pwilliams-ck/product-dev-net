@@ -16,21 +16,46 @@
       - htop
 
   tasks:
-    - name: Update package cache
+    - name: Update package cache (Debian)
       apt:
         update_cache: yes
+      when: ansible_facts['os_family'] == 'Debian'
 
-    - name: Install specified packages
+    - name: Update package cache (Red Hat)
+      yum:
+        update_cache: yes
+      when: ansible_facts['os_family'] == 'RedHat'
+
+    - name: Install specified packages (Debian)
       apt:
         name: "{{ packages }}"
         state: present
+      when: ansible_facts['os_family'] == 'Debian'
 
-    - name: Install bat
+    - name: Install specified packages (Red Hat)
+      yum:
+        name: "{{ packages }}"
+        state: present
+      when: ansible_facts['os_family'] == 'RedHat'
+
+    - name: Install bat (Debian)
       apt:
         deb: https://github.com/sharkdp/bat/releases/download/v0.22.1/bat_0.22.1_amd64.deb
       when: ansible_facts['os_family'] == 'Debian'
 
-    - name: Install dust
+    - name: Install bat (Red Hat)
+      yum:
+        name: https://github.com/sharkdp/bat/releases/download/v0.22.1/bat-0.22.1-1.x86_64.rpm
+        state: present
+      when: ansible_facts['os_family'] == 'RedHat'
+
+    - name: Install dust (Debian)
       apt:
         deb: https://github.com/bootandy/dust/releases/download/v1.0.0/du-dust_1.0.0-1_amd64.deb
       when: ansible_facts['os_family'] == 'Debian'
+
+    - name: Install dust (Red Hat)
+      yum:
+        name: https://github.com/bootandy/dust/releases/download/v1.0.0/du-dust-1.0.0-1.x86_64.rpm
+        state: present
+      when: ansible_facts['os_family'] == 'RedHat'
