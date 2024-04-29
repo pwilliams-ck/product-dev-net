@@ -2,15 +2,31 @@
 
 Installs helpful tools for network, system, and devops engineers.
 
-
 It is currently working with Debian systems.
 
-RPM testing will be next, and MacOS will come later.
+RPM testing next, MacOS will come later.
 
 ## Getting Started
 
-To install the packages on a local machine, install [ansible](https://www.ansible.com/), and
-run the follwing command.
+To install everything on a local machine, install [ansible](https://www.ansible.com/).
+
+### Debian/Ubuntu
+
+```bash
+sudo apt install ansible
+```
+### RPM
+
+```bash
+sudo yum install ansible
+```
+### Darwin
+
+```bash
+brew install ansible
+```
+
+Now run the follwing command.
 
 ```bash
 sudo ansible-pull -U https://github.com/pwilliams-ck/product-dev-net
