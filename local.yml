@@ -1,0 +1,36 @@
+---
+- hosts: localhost
+  become: yes
+
+  vars:
+    packages:
+      - traceroute
+      - net-tools
+      - whois
+      - iperf
+      - nmap
+      - nvim
+      - fzf
+      - tmux
+      - ripgrep
+      - htop
+
+  tasks:
+    - name: Update package cache
+      apt:
+        update_cache: yes
+
+    - name: Install specified packages
+      apt:
+        name: "{{ packages }}"
+        state: present
+
+    - name: Install bat
+      apt:
+        deb: https://github.com/sharkdp/bat/releases/download/v0.22.1/bat_0.22.1_amd64.deb
+      when: ansible_facts['os_family'] == 'Debian'
+
+    - name: Install dust
+      apt:
+        deb: https://github.com/bootandy/dust/releases/download/v1.0.0/du-dust_1.0.0-1_amd64.deb
+      when: ansible_facts['os_family'] == 'Debian'
