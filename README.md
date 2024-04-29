@@ -1,9 +1,7 @@
 # product-dev-net
 
-This is inspired by my other repo for automating the set up of my developer environmet.
+Installs helpful tools for network, system, and devops engineers.
 
-[product-dev](https://github.com/pwilliams-ck/product-dev), installs helpful tools for
-network, systems, and devops engineers.
 
 It is currently working with Debian systems.
 
@@ -23,3 +21,9 @@ That's it, very noteworthy mentions are:
 - `fzf` - Fuzzy file finding
 - `rg` - Ripgrep, faster `grep`, repects hidden files
 - `dust` - Fancy `du` for disk usage. Just run `dust`
+
+## Conclusion
+
+This is inspired by my other repo for automating the set up of my developer environmet, you 
+can check it out [here](https://github.com/pwilliams-ck/product-dev). There is some other neat
+stuff related to `neovim`, `tmux`, and `fzf`, among others.
