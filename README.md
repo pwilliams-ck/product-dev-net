@@ -37,10 +37,10 @@ That's it, very noteworthy mentions to try out are:
 
 - `fzf` - Fuzzy file finding
 - `rg` - Ripgrep, faster `grep`, repects hidden files
-- `dust` - Fancy `du` for disk usage. Just run `dust`
+- `dust` - Fancy `du` for disk usage
 
 ## Conclusion
 
-This is inspired by my other repo for automating the set up of my developer environmet, you 
+This is inspired by my other repo for automating the set up of my developer environment, you 
 can check it out [here](https://github.com/pwilliams-ck/product-dev). There is some other neat
 stuff related to `neovim`, `tmux`, and `fzf`, among others.
