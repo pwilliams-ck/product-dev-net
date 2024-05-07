@@ -8,7 +8,7 @@ RPM testing next, MacOS will come later.
 
 ## Getting Started
 
-To install everything on a local machine, install [ansible](https://www.ansible.com/).
+To install everything on a local machine, you need to install [ansible](https://www.ansible.com/) first.
 
 ### Debian/Ubuntu
 
