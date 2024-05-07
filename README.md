@@ -43,4 +43,4 @@ That's it, noteworthy mentions to try out are:
 
 This is inspired by my other repo for automating the set up of my developer environment, you 
 can check it out [here](https://github.com/pwilliams-ck/product-dev). There is some other neat
-stuff related to `neovim`, `tmux`, and `fzf`, among others. Heavy insiration from [ThePrimeagen](twitch.tv/theprimeagen)
+stuff related to `neovim`, `tmux`, and `fzf`, among others. Heavy insiration from [ThePrimeagen](twitch.tv/theprimeagen).
