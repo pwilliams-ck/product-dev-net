@@ -1,4 +1,4 @@
-# product-dev-net
+\# product-dev-net
 
 Installs helpful tools for network, system, and devops engineers.
 
@@ -33,10 +33,10 @@ Now that Ansible is installed, run the follwing command.
 sudo ansible-pull -U https://github.com/pwilliams-ck/product-dev-net
 ```
 
-That's it, very noteworthy mentions to try out are:
+That's it, noteworthy mentions to try out are:
 
 - `fzf` - Fuzzy file finding
-- `rg` - Ripgrep, faster `grep`, repects hidden files
+- `rg` - Ripgrep, faster `grep`, respects hidden files
 - `dust` - Fancy `du` for disk usage
 
 ## Conclusion
